@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, Tabs } from 'expo-router';
 import { HeaderButton } from '../../components/HeaderButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
@@ -6,25 +7,39 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'black',
-      }}>
+        tabBarActiveTintColor: '#2563eb', // Blu acceso
+        headerRight: () => (
+          <Link href="/modal" asChild>
+            <HeaderButton />
+          </Link>
+        ),
+      }}
+    >
+
+      {/* HOME */}
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <HeaderButton />
-            </Link>
-          ),
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
+
+      {/* TUTTI GLI EVENTI */}
       <Tabs.Screen
-        name="two"
+        name="events"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Eventi',
+          tabBarIcon: ({ color }) => <TabBarIcon name="calendar" color={color} />,
+        }}
+      />
+
+      {/* I MIEI EVENTI */}
+      <Tabs.Screen
+        name="my-events"
+        options={{
+          title: 'I miei eventi',
+          tabBarIcon: ({ color }) => <TabBarIcon name="clipboard" color={color} />,
         }}
       />
     </Tabs>

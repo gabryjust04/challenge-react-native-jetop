@@ -3,7 +3,6 @@
     "name": "challenge-verissima",
     "slug": "challenge-verissima",
     "version": "1.0.0",
-
     "scheme": "challenge-verissima",
     "web": {
       "bundler": "metro",
@@ -21,21 +20,19 @@
     ],
     "experiments": {
       "typedRoutes": true,
-
       "tsconfigPaths": true
     },
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "automatic",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -43,6 +40,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.ggiusti.challengeverissima"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "47301f10-3d73-4871-b674-fb5caba02530"
       }
     }
   }

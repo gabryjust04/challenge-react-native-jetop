@@ -9,7 +9,8 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: '#2563eb', // Blu acceso
         headerRight: () => (
-          <Link href="/modal" asChild>
+          // Pulsante per andare al profilo
+          <Link href="/profile" asChild>
             <HeaderButton />
           </Link>
         ),

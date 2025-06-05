@@ -190,7 +190,7 @@ export default function EventDetails() {
               Sei già prenotato
             </Text>
           </View>
-
+            {/* Qua ci volevo mettere il qrcode ma mi crasha l'app boh, sempre ste liberie */}
           {/* QR Code con l'ID della prenotazione */}
           {bookingId && (
             <View className="items-center mt-6">
